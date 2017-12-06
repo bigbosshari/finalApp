@@ -31,7 +31,7 @@ let searchbar = <div>
 </div>
   <form data-search-list=".search-here" data-search-in=".item-title" className="searchbar searchbar-init">
     <div className="searchbar-input">
-      <center><input id='dates' type='date' placeholder="Enter a new date"/><a href="dates" className="searchbar-clear"></a></center>
+      <center><input id='dates' type='date' placeholder="Enter a new date"/><a href="clock" className="searchbar-clear"></a></center>
       <center><button> 
         Submit
         </button></center>
@@ -92,7 +92,7 @@ function initializeClock(id, endtime) {
   var timeinterval = setInterval(updateClock, 1000);
 }
 
-var deadline = new Date(Date.parse(new Date()) + 24 * 24 * 60 * 60 * 1000);
+var deadline = new Date(Date.parse(new Date()) + 25 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
 
 ReactDOM.render(searchbar,document.getElementById('root'));
